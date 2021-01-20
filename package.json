@@ -14,7 +14,6 @@
     "client:install": "npm install --prefix client",
     "build": "npm-run-all clean transpile build:client",
     "build:client":"npm run build --prefix client",
-    "install": "npm run server:install && npm run client:install",
     "dev": "concurrently \"npm run dev:server\" \"npm run start:client\"",
     "dev:server": "NODE_ENV=development npm-run-all build server",
     "prod": "NODE_ENV=production npm-run-all build server",
