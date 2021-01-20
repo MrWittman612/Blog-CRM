@@ -9,6 +9,7 @@
     "watch:dev": "nodemon",
     "start": "npm run prod",
     "start:client":"npm run start --prefix client",
+    "postinstall": "npm --prefix client install",
     "server": "node server_dist",
     "install:server": "npm install",
     "install:client": "npm install --prefix client",
