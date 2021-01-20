@@ -4,7 +4,8 @@
   "description": "MERN stack application, Intergrading express, mongoDB, React, Material-ui, React-Admin, and storybook.js.",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -26,6 +27,6 @@
   },
   "homepage": "https://github.com/MrWittman612/Blog-CRM#readme",
   "dependencies": {
-    "exrpess": "0.0.1-security"
+    "express": "^4.17.1"
   }
 }
