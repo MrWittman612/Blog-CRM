@@ -1,0 +1,31 @@
+{
+  "name": "blog-crm",
+  "version": "1.0.0",
+  "description": "MERN stack application, Intergrading express, mongoDB, React, Material-ui, React-Admin, and storybook.js.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MrWittman612/Blog-CRM.git"
+  },
+  "keywords": [
+    "exoress",
+    "mongoDB",
+    "React",
+    "Material-ui",
+    "React-Admin",
+    "and",
+    "storybook.js"
+  ],
+  "author": "Chad Wittman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MrWittman612/Blog-CRM/issues"
+  },
+  "homepage": "https://github.com/MrWittman612/Blog-CRM#readme",
+  "dependencies": {
+    "exrpess": "0.0.1-security"
+  }
+}
