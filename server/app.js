@@ -17,7 +17,7 @@ if (process.env.NODE_ENV === 'production') {
   });
 }
 function start() {
-  app.listen(port, console.log('started!!!'));
+  app.listen(port, console.log('man I'm reall upset right now!!!'));
 }
 const _start = start;
 
