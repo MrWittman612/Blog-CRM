@@ -1,3 +1,4 @@
 node_modules
 server_dist
+.vscode
 **/package-lock.json

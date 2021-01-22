@@ -1,10 +1,14 @@
-import express from 'express';
+'use strict';
 import path from 'path';
-
+import express from 'express';
 const app = express();
+app.locals.name = 'MR.Wittman-blog';
+const appName = app.locals.name;
+
 const port = process.env.PORT || 3001;
+
 app.get('/test', function (_req, res) {
-  res.send('Hello World');
+  return res.send('Hello World');
 });
 
 if (process.env.NODE_ENV === 'production') {
@@ -16,9 +20,7 @@ if (process.env.NODE_ENV === 'production') {
     res.sendFile(path.join(__dirname, '../client/build', 'index.html'));
   });
 }
-function start() {
-  app.listen(port, console.log('man Im really upset right now!!!!'));
-}
-const _start = start;
 
-export { _start as start };
+export function start() {
+  app.listen(port, console.log(`${appName} is listening on port: ${port}`));
+}
