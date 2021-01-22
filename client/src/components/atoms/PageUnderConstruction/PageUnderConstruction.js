@@ -4,6 +4,7 @@ import { makeStyles } from '@material-ui/core';
 
 const useStyles = makeStyles(() => ({
   root: {
+    height: '100%',
     backgroundImage: `url('${image}')`,
     backgroundPosition: 'center',
     backgroundSize: 'cover',
