@@ -2,14 +2,35 @@
 require('dotenv').config();
 import path from 'path';
 import express from 'express';
+import { dbConnect } from './dbConnect';
+import { BlogModel } from './Schema';
 const app = express();
 app.locals.name = 'MR.Wittman-blog';
 const appName = app.locals.name;
 
 const port = process.env.PORT || 3001;
 
-app.get('/test', function (_req, res) {
-  return res.send('Hello World');
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+dbConnect();
+
+app.get('/api/blogs', async function (req, res) {
+  try {
+    const blog = await BlogModel.find();
+    return res.send(blog);
+  } catch (error) {
+    console.log(error);
+  }
+});
+
+app.post('/api/blogs', async function (req, res) {
+  try {
+    const blog = await BlogModel.create(req.body);
+    return res.send(blog);
+  } catch (error) {
+    console.log(error);
+  }
 });
 
 if (process.env.NODE_ENV === 'production') {
