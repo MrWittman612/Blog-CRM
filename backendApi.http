@@ -1,0 +1,17 @@
+@baseHost = http://localhost:3001/api 
+
+
+
+GET {{baseHost}} HTTP/1.1
+Content-Type: application/json
+
+
+###
+
+POST  {{baseHost}}/blogs HTTP/1.1
+Content-Type: application/json
+
+{
+    "title": "blog 4",
+    "text": "kjha;klahddfg;khd sdlkjhf lkh skdhjfalkfh"
+}
