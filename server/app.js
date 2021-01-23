@@ -1,4 +1,5 @@
 'use strict';
+require('dotenv').config();
 import path from 'path';
 import express from 'express';
 const app = express();
