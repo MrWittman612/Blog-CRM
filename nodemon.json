@@ -1,6 +1,6 @@
 {
     "verbose":"true",
     "exec": "npm run dev",
-    "watch": ["server/*", "client/*"],
+    "watch": ["server/*"],
     "ignore": ["*.test.js"]
 }

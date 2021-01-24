@@ -16,11 +16,12 @@
     "build": "npm-run-all clean transpile build:client",
     "build:client": "npm run build --prefix client",
     "build:server": "npm-run-all clean transpile",
-    "dev": "concurrently \"npm run dev:server\" \"npm run start:client\"",
-    "dev:server": "NODE_ENV=development npm-run-all build:server server",
+    "dev": "concurrently \"npm run dev:server\" \"npm run start:client\" \"npm run storybook --prefix client\"",
+    "dev:server": "NODE_ENV=development npm-run-all clean transpile server",
     "prod": "NODE_ENV=production npm-run-all build:server server",
     "transpile": "babel ./server --out-dir server_dist",
-    "clean": "rimraf server_dist"
+    "clean": "rimraf server_dist",
+    "storybook": "npm run storybook --prefix client"
   },
   "repository": {
     "type": "git",
@@ -54,6 +55,8 @@
     "rimraf": "^3.0.2"
   },
   "devDependencies": {
+    "@storybook/addons": "^6.1.15",
+    "@storybook/theming": "^6.1.15",
     "concurrently": "^5.3.0",
     "eslint": "^7.18.0",
     "eslint-config-prettier": "^7.2.0",
