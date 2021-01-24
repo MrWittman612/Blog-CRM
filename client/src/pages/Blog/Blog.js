@@ -1,6 +1,9 @@
 import React from 'react';
 import Axios from 'axios';
 
+import { AppBar, IconButton, Toolbar, Typography } from '@material-ui/core';
+import { StopOutlined } from '@material-ui/icons';
+
 export function Blog() {
   const [blogs, setBlogs] = React.useState(null);
 
@@ -17,7 +20,15 @@ export function Blog() {
   }, []);
 
   return (
-    <div>
+    <React.Fragment>
+      <AppBar>
+        <Toolbar>
+          <IconButton>
+            <StopOutlined />
+          </IconButton>
+          <Typography>Blog</Typography>
+        </Toolbar>
+      </AppBar>
       {!blogs && <h1>Loading blogs</h1>}
       {blogs &&
         blogs.map((blog) => (
@@ -26,6 +37,6 @@ export function Blog() {
             <p>{blog.text}</p>
           </>
         ))}
-    </div>
+    </React.Fragment>
   );
 }
